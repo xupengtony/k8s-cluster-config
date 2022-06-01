@@ -5,8 +5,8 @@ metadata:
   namespace: flux-system
 type: Opaque
 data:
-  username: eHVwZW5ndG9ueQ==
-  password: MTIzNEFCY2Q=
+  username: {username}
+  password: {password}
 
 ---
 
@@ -17,7 +17,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 2m0s
-  url: https://gitee.com/xupengtony/spring-petclinic-config
+  url: https://github.com/xupengtony/spring-petclinic-config
   ref:
     branch: master
   secretRef:
