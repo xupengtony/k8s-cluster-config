@@ -21,7 +21,7 @@ Or install the CLI by downloading precompiled binaries using a Bash script:
 ```sh
 curl -s https://fluxcd.io/install.sh | sudo bash
 
-# Repository structure
+## Repository structure
 
 The Git repository contains the following top directories:
 
@@ -29,19 +29,12 @@ The Git repository contains the following top directories:
 - **infrastructure** dir contains common infra tools such as NGINX ingress controller and Helm repository definitions
 - **clusters** dir contains the Flux configuration per cluster
 
-```
-├── apps
-│   ├── base
-│   ├── production
-│   └── staging
-├── infrastructure
-│   ├── nginx
-│   ├── redis
-│   └── sources
-└── clusters
-    ├── production
-    └── staging
-```
+
+The apps configuration is structured into:
+
+- **apps/base/** dir contains namespaces and Helm release definitions
+- **apps/production/** dir contains the production Helm release values
+- **apps/staging/** dir contains the staging values
 
 ## Bootstrap staging
 
