@@ -1,0 +1,5 @@
+auth:
+  database: petclinic
+  rootPassword: root
+  username: petclinic
+  password: petclinic

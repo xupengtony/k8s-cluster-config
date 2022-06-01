@@ -1,0 +1,22 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: spring-petclinic-cluster-role
+rules:
+  - apiGroups: [""]
+    resources: ["secrets","pods","services","deployments","namespaces"]
+    verbs: ["get", "watch", "list","update", "patch", "delete"]
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: spring-petclinic-global
+subjects:
+  - kind: ServiceAccount
+    name: spring-petclinic
+    namespace: spring-petclinic
+roleRef:
+  kind: ClusterRole
+  name: spring-petclinic-cluster-role
+  apiGroup: rbac.authorization.k8s.io
