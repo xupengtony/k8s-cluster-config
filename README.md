@@ -46,6 +46,8 @@ export GITHUB_USER=<your-username>
 export GITHUB_REPO=<repository-name>
 ```
 
+add your username/password in the source.secret configuraton. **app/base/app-spring-petclinic/  source.yaml
+
 Verify that your staging cluster satisfies the prerequisites with:
 
 ```sh
